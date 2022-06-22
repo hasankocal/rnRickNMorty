@@ -1,10 +1,11 @@
-import {StyleSheet, View, ScrollView, Text} from 'react-native';
-import React, {useEffect, useState} from 'react';
+import { StyleSheet, View, ScrollView, Text } from 'react-native';
+import React, { useEffect, useState } from 'react';
 import Header from './component/Header';
 import Episode from './component/Episode';
 import axios from 'axios';
+import { SafeAreaView } from 'react-native-safe-area-context';
 
-const EpisodeScreen = ({navigation}) => {
+const EpisodeScreen = ({ navigation }) => {
   const [episodes, setEpisodes] = useState([]);
   const [isLoading, setisLoading] = useState(true);
 
@@ -27,14 +28,16 @@ const EpisodeScreen = ({navigation}) => {
     );
   }
   return (
-    <View style={styles.container}>
-      <Header />
-      <ScrollView>
-        {episodes.map((item, i) => (
-          <Episode key={i} item={item} navigation={navigation} />
-        ))}
-      </ScrollView>
-    </View>
+    <SafeAreaView style={{ backgroundColor: '#151821' }}>
+      <View style={styles.container}>
+        <Header />
+        <ScrollView>
+          {episodes.map((item, i) => (
+            <Episode key={i} item={item} navigation={navigation} />
+          ))}
+        </ScrollView>
+      </View>
+    </SafeAreaView>
   );
 };
 
