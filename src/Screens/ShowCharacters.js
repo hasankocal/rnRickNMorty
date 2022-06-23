@@ -3,7 +3,8 @@ import React from 'react';
 import Avatar from './component/Avatar';
 
 const ShowCharacters = ({data}) => {
-  if (!data) {
+  const cha = data.characters;
+  if (!cha) {
     return (
       <View>
         <Text>Loading</Text>
@@ -11,7 +12,7 @@ const ShowCharacters = ({data}) => {
     );
   }
   //console.log(data);
-  const cha = data.characters;
+
   return (
     <View>
       <Text style={styles.title}>Characters</Text>
