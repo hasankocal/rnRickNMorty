@@ -1,16 +1,18 @@
-import { StyleSheet, Text, View, Image } from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const Avatar = ({ id }) => {
-  console.log(id)
+const Avatar = ({id}) => {
+  console.log(id);
   return (
     <View style={styles.avatarStyle}>
-      <Image
-        source={{
-          uri: `https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`,
-        }}
-        resizeMode="contain"
-        style={styles.avatar}></Image>
+      <TouchableOpacity>
+        <Image
+          source={{
+            uri: `https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`,
+          }}
+          resizeMode="contain"
+          style={styles.avatar}></Image>
+      </TouchableOpacity>
     </View>
   );
 };
