@@ -1,8 +1,8 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
 import React from 'react';
 import Avatar from './component/Avatar';
 
-const ShowCharacters = ({data}) => {
+const ShowCharacters = ({ data }) => {
   const cha = data.characters;
   if (!cha) {
     return (
@@ -25,14 +25,13 @@ const ShowCharacters = ({data}) => {
             justifyContent: 'center',
           }}>
           {cha.map((c, i) => (
-            <Avatar key={i} />
+            <Avatar key={i} id={c.split("/")[5]} />
           ))}
         </View>
       </ScrollView>
     </View>
   );
 };
-
 export default ShowCharacters;
 
 const styles = StyleSheet.create({
