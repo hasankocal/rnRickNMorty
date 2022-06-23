@@ -1,16 +1,15 @@
 import * as React from 'react';
-import {NavigationContainer} from '@react-navigation/native';
-import {createBottomTabNavigator} from '@react-navigation/bottom-tabs';
-import {Chacters, Locations, Episodes} from './Stacks';
+import { Image } from 'react-native'
+import { NavigationContainer } from '@react-navigation/native';
+import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import { Chacters, Locations, Episodes } from './Stacks';
 
 const Tab = createBottomTabNavigator();
 
 const tabConfig = {
-  tabBarStyle: {backgroundColor: '#151821', borderTopWidth: 0},
+  tabBarStyle: { backgroundColor: '#151821', borderTopWidth: 0 },
 };
-const screenConfig = {
-  headerShown: false,
-};
+
 
 export default function App() {
   return (
@@ -19,17 +18,17 @@ export default function App() {
         <Tab.Screen
           name="Chacters"
           component={Chacters}
-          options={screenConfig}
+          options={{ tabBarIcon: () => (<Image source={require("./assets/profile.png")} style={{ width: 30, height: 30 }} />), headerShown: false }}
         />
         <Tab.Screen
           name="Locations"
           component={Locations}
-          options={screenConfig}
+          options={{ tabBarIcon: () => (<Image source={require("./assets/locations.png")} style={{ width: 30, height: 30 }} />), headerShown: false }}
         />
         <Tab.Screen
           name="Episodes"
           component={Episodes}
-          options={screenConfig}
+          options={{ tabBarIcon: () => (<Image source={require("./assets/movies.png")} style={{ width: 30, height: 30 }} />), headerShown: false }}
         />
       </Tab.Navigator>
     </NavigationContainer>
