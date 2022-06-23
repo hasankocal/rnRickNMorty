@@ -1,11 +1,16 @@
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 import React from 'react';
 
-const Avatar = ({id}) => {
-  console.log(id);
+const Avatar = ({id, navigation}) => {
+  //console.log(navigation);
   return (
     <View style={styles.avatarStyle}>
-      <TouchableOpacity>
+      <TouchableOpacity
+        onPress={() =>
+          navigation.navigate('CharacterDetail', {
+            itemId: id,
+          })
+        }>
         <Image
           source={{
             uri: `https://rickandmortyapi.com/api/character/avatar/${id}.jpeg`,

@@ -46,6 +46,11 @@ export function Episodes() {
         component={EpisodeDetail}
         options={{headerShown: false}}
       />
+      <EpisodeStack.Screen
+        name="CharacterDetail"
+        component={CharacterDetail}
+        options={{headerShown: false}}
+      />
     </EpisodeStack.Navigator>
   );
 }

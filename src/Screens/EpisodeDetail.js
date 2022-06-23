@@ -1,12 +1,12 @@
-import { StyleSheet, Text, SafeAreaView, View } from 'react-native';
-import React, { useEffect, useState } from 'react';
+import {StyleSheet, Text, SafeAreaView, View} from 'react-native';
+import React, {useEffect, useState} from 'react';
 import Header from './component/Header';
 import ShowCharacters from './ShowCharacters';
 import axios from 'axios';
 
-const EpisodeDetail = ({ route, navigation }) => {
+const EpisodeDetail = ({route, navigation}) => {
   const id = route.params.id;
-  console.log(id);
+  // console.log(id);
   const [detail, setDetail] = useState([]);
   const [isLoading, setisLoading] = useState(true);
 
@@ -29,8 +29,8 @@ const EpisodeDetail = ({ route, navigation }) => {
       <Text style={styles.episodeTitle}> {detail.name} </Text>
       <Text style={styles.episodeTitle}> Air Date: {detail.air_date} </Text>
       <Text style={styles.episodeTitle}> Episode: {detail.episode} </Text>
-      <View style={{ flex: 1, flexDirection: 'row' }}>
-        <ShowCharacters data={detail} />
+      <View style={{flex: 1, flexDirection: 'row'}}>
+        <ShowCharacters data={detail} navigation={navigation} />
       </View>
     </View>
   );
@@ -45,7 +45,7 @@ const styles = StyleSheet.create({
     border: '0',
     width: '100%',
     height: '100%',
-    paddingTop: 30
+    paddingTop: 30,
   },
   episodeTitle: {
     fontSize: 20,

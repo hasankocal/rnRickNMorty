@@ -2,7 +2,7 @@ import {StyleSheet, Text, View, ScrollView} from 'react-native';
 import React from 'react';
 import Avatar from './component/Avatar';
 
-const ShowCharacters = ({data}) => {
+const ShowCharacters = ({data, navigation}) => {
   const cha = data.characters;
   if (!cha) {
     return (
@@ -25,7 +25,7 @@ const ShowCharacters = ({data}) => {
             justifyContent: 'center',
           }}>
           {cha.map((c, i) => (
-            <Avatar key={i} id={c.split('/')[5]} />
+            <Avatar navigation={navigation} key={i} id={c.split('/')[5]} />
           ))}
         </View>
       </ScrollView>
@@ -41,23 +41,5 @@ const styles = StyleSheet.create({
     color: '#bebfc1',
     marginTop: 12,
     padding: 12,
-  },
-
-  kutu1: {
-    flex: 5,
-    width: '30%',
-    backgroundColor: 'black',
-  },
-  kutu2: {
-    flex: 5,
-    width: '30%',
-
-    backgroundColor: 'red',
-  },
-  kutu3: {
-    flex: 3,
-    width: '30%',
-
-    backgroundColor: 'green',
   },
 });
