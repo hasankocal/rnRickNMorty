@@ -8,7 +8,7 @@ import {
 } from 'react-native';
 import React from 'react';
 
-const Episode = ({item, navigation}) => {
+const Episode = ({ item, navigation }) => {
   return (
     <View style={styles.episodes}>
       <TouchableOpacity
@@ -23,10 +23,10 @@ const Episode = ({item, navigation}) => {
           }}
           resizeMode="cover"
           style={styles.imageBg}
-          imageStyle={{borderRadius: 10}}>
+          imageStyle={{ borderRadius: 10 }}>
           <View style={styles.content}>
-            <Text style={{color: '#bebfc1', padding: 10}}>{item.name}</Text>
-            <View style={{flexDirection: 'column', alignItems: 'flex-end'}}>
+            <Text style={{ color: '#bebfc1', padding: 10, fontSize: 24, fontWeight: "bold" }}>{item.name}</Text>
+            <View style={{ flexDirection: 'column', alignItems: 'flex-end' }}>
               <Image
                 source={require('./../../assets/righticon.png')}
                 style={{
@@ -37,7 +37,7 @@ const Episode = ({item, navigation}) => {
               />
             </View>
           </View>
-          <Text style={{color: '#bebfc1', padding: 10}}>{item.air_date}</Text>
+          <Text style={{ color: '#bebfc1', padding: 10, fontSize: 16 }}>{item.air_date}</Text>
         </ImageBackground>
       </TouchableOpacity>
     </View>

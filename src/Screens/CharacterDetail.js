@@ -1,11 +1,11 @@
-import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
-import React, {useState, useEffect} from 'react';
+import { StyleSheet, Text, View, Image, ScrollView } from 'react-native';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import Header from './component/Header';
 import Episode from './component/Episode';
 
-const CharacterDetail = ({route, navigation}) => {
-  const {itemId} = route.params;
+const CharacterDetail = ({ route, navigation }) => {
+  const { itemId } = route.params;
   const [character, setCharacter] = useState([]);
   const [isLoading, setisLoading] = useState(true);
 
@@ -43,7 +43,8 @@ const CharacterDetail = ({route, navigation}) => {
           </Text>
           <Text style={styles.title}>Species: {character.species}</Text>
           <Text style={styles.title}>Gender: {character.gender}</Text>
-          <View style={{width: '100%'}}>
+          <View style={{ width: '100%' }}>
+            <Text style={{ fontWeight: "bold", color: '#bebfc1', fontSize: 18, padding: 6 }}>Character Episodes</Text>
             {character.episode.map((item, i) => (
               <Episode key={i} item={item} navigation={navigation} />
             ))}
