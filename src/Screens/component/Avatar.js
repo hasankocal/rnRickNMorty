@@ -6,7 +6,7 @@ const Avatar = () => {
     <View style={styles.avatarStyle}>
       <Image
         source={{
-          uri: 'https://rickandmortyapi.com/api/character/avatar/1.jpeg',
+          uri: 'https://rickandmortyapi.com/api/character/avatar/2.jpeg',
         }}
         resizeMode="contain"
         style={styles.avatar}></Image>
@@ -18,10 +18,7 @@ export default Avatar;
 
 const styles = StyleSheet.create({
   avatarStyle: {
-    flex: 3,
-    flexDirection: 'column',
-    justifyContent: 'center',
-    alignItems: 'center',
+    padding: 5,
   },
   avatar: {
     width: 100,

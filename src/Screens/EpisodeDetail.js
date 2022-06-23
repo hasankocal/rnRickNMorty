@@ -22,13 +22,16 @@ const EpisodeDetail = ({route, navigation}) => {
     getDetails();
   }, []);
   //console.log(isLoading, detail);
+
   return (
     <View style={styles.container}>
       <Header />
       <Text style={styles.episodeTitle}> {detail.name} </Text>
       <Text style={styles.episodeTitle}> Air Date: {detail.air_date} </Text>
       <Text style={styles.episodeTitle}> Episode: {detail.episode} </Text>
-      <ShowCharacters data={detail.characters} />
+      <View style={{flex: 1, flexDirection: 'row'}}>
+        <ShowCharacters data={detail} />
+      </View>
     </View>
   );
 };

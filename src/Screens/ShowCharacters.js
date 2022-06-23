@@ -1,18 +1,34 @@
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, ScrollView} from 'react-native';
 import React from 'react';
 import Avatar from './component/Avatar';
 
 const ShowCharacters = ({data}) => {
-  console.log(data);
+  if (!data) {
+    return (
+      <View>
+        <Text>Loading</Text>
+      </View>
+    );
+  }
+  //console.log(data);
+  const cha = data.characters;
   return (
-    <>
+    <View>
       <Text style={styles.title}>Characters</Text>
-      <View style={{}}></View>
-
-      <View style={styles.kutu1}></View>
-      <View style={styles.kutu2}></View>
-      <View style={styles.kutu3}></View>
-    </>
+      <ScrollView>
+        <View
+          style={{
+            flex: 1,
+            flexDirection: 'row',
+            flexWrap: 'wrap',
+            justifyContent: 'center',
+          }}>
+          {cha.map((c, i) => (
+            <Avatar key={i} />
+          ))}
+        </View>
+      </ScrollView>
+    </View>
   );
 };
 
