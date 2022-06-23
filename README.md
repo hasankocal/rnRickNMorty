@@ -25,7 +25,7 @@ npm run ios && npm run andorid
 
 * Twitter: [@hasankocal](https://twitter.com/hasankocal)
 * Github: [@hasankocal](https://github.com/hasankocal)
-* LinkedIn: [@www.linkedin.com\/in\/hasankocal](https://linkedin.com/in/www.linkedin.com\/in\/hasankocal)
+* LinkedIn: [@hasankocal](https://linkedin.com/in/hasankocal)
 
 ## Show your support
 
