@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to rnRickAndMorty 👋</h1>
 <p>
-  <a href="https://twitter.com/hasankocal" target="_blank">
+  <a href="https://twitter.com/hasankoxal" target="_blank">
     <img alt="Twitter: hasankocal" src="https://img.shields.io/twitter/follow/hasankocal.svg?style=social" />
   </a>
 </p>
